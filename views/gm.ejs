@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Find The Show</title>
+        <style>
+          @media(max-width:991px) { 
+            body{
+            overflow: hidden;
+           }
+            .container{
+                width:100%;
+                height:100vh;
+                background: linear-gradient(rgb(235, 224, 244),rgb(143, 91, 233)) ;
+                display:flex;
+                border-radius:10px;
+                justify-content: center;
+            }
+            .first{
+                height:60vh;
+                width:70%;
+                margin-top:20%;
+                border-radius:10px;
+                border-left:  2px solid rgb(102, 175, 235)  ;
+                border-bottom:  2px solid rgb(102, 175, 235)  ;
+                border-right:  2px solid rgb(102, 175, 235) ;
+                background: linear-gradient(rgb(235, 224, 244),rgb(72, 145, 236)) ;
+            }
+            .ig{
+                height: 30vh;
+                 width: 50%;
+                 margin-left: 25%;
+                border-radius: 10px;
+                 margin-top: 10%;
+                 border: 3px solid #007bff66;
+            }
+            .que{
+              font-size: 1.8rem;
+              margin-top:25%;
+              margin-left: 10%;
+              font-family: monospace;
+              color: #0b2d50;
+              font-weight: 1000;
+            }
+            input[type=text]:focus{
+                border: 2px solid #4780f2;
+            }
+            input[type=text]{
+               margin-left: 10%;
+                margin-top: 8%;
+               width: 70%;
+               height: 2.8vh;
+               font-size: 1.2rem;
+               color: rgb(18 61 135);
+               font-size: 1.5rem;
+               border-radius: 8px;
+               border: 2px solid #a900ff9e;
+               outline: none;
+               text-decoration: none;
+            }
+           button{
+             height: 2.4vh;
+             width: 15%;
+             font-size: 1.5rem;
+             border: 1.5px solid #ffffff85;
+             border-radius: 6px;
+             background: #297fdc;
+             color: #ffffffb5;
+           }
+           button:hover{
+                 color:#297fdc;
+                 background:#ffffffb5;
+           }
+          
+        }
+          @media(min-width:992px)
+          {
+            body{
+            overflow: hidden;
+           }
+            .container{
+                width:100%;
+                height:100vh;
+                background: linear-gradient(rgb(235, 224, 244),rgb(143, 91, 233)) ;
+                display:flex;
+                border-radius:10px;
+                justify-content: center;
+                align-items: center;
+            }
+            .first{
+                height:80vh;
+                width:40%;
+                border-radius:10px;
+                border-left:  2px solid rgb(102, 175, 235)  ;
+                border-bottom:  2px solid rgb(102, 175, 235)  ;
+                border-right:  2px solid rgb(102, 175, 235) ;
+                background: linear-gradient(rgb(235, 224, 244),rgb(72, 145, 236)) ;
+            }
+            .ig{
+                height: 40vh;
+                 width: 35%;
+                 margin-left: 33%;
+                border-radius: 10px;
+                 margin-top: 5%;
+                 border: 3px solid #007bff66;
+            }
+            .que{
+              font-size: 1.5rem;
+              margin-left: 14%;
+              font-family: monospace;
+              color: #0b2d50;
+              font-weight: 1000;
+            }
+            input[type=text]:focus{
+                border: 2px solid #4780f2;
+            }
+            input[type=text]{
+               margin-left: 10%;
+               width: 70%;
+               height: 30px;
+               color: rgb(18 61 135);
+               font-size: 1.2rem;
+               border-radius: 8px;
+               border: 2px solid #a900ff9e;
+               outline: none;
+               text-decoration: none;
+            }
+           button{
+             height: 28px;
+             width: 50px;
+             border: 1.5px solid #ffffff85;
+             border-radius: 6px;
+             background: #297fdc;
+             color: #ffffffb5;
+           }
+           button:hover{
+                 color:#297fdc;
+                 background:#ffffffb5;
+           }
+          }
+          
+        </style>
+    </head>
+    <body>
+       <div class="container">
+             <div class="first">
+              <img class="ig" src="">
+              <p class="que"> <%= m %>.What is the name of the show ?</p>
+              <form action="/start" method="post">
+                <input class="inp" type="text" name="ans" autocomplete="off" spellcheck="false">
+                <button type="submit">Done</button>
+              </form>
+              <p id="num" hidden><%= num %> </p>
+             </div>
+       </div>
+       <script>
+       const number=Number(document.querySelector("#num").innerHTML);
+        const img="img_"+number+".jpg";
+        document.querySelector("img").setAttribute("src",img
+        );
+       </script>
+    </body>
+</html>
