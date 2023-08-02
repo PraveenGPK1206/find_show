@@ -4,7 +4,7 @@
   "description": "my first small pj",
   "main": "ap.js",
   "scripts": {
-     "dev": "nodemon app.js",
+     "dev": "nodemon ap.js",
     "build": "npm i",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
